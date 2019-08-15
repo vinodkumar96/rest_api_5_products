@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="orange">
+<table border="2">
+    <tr>
+        <th>p_id</th>
+        <td>p_name</td>
+        <td>p_cost</td>
+        <td>p_mfd</td>
+        <td>p_exd</td>
+    </tr>
+    {% for prod in recs %}
+    <tr>
+        <td>{{ prod.p_id }}</td>
+        <td>{{ prod.p_name|upper }}</td>
+        <td>{{ prod.p_cost }}</td>
+        <td>{{ prod.p_mfd }}</td>
+        <td>{{ prod.p_exd }}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+<a href="./">Click here to insert another product</a>
+</body>
+</html>
